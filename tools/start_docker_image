@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+docker run --rm -ti \
+  -v /dev:/dev \
+  -v /run/udev:/run/udev:ro \
+  --device-cgroup-rule='c 189:* rmw' \
+  esp32-c3-rust-dev-env bash
